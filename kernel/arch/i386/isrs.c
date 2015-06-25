@@ -112,7 +112,7 @@ void fault_handler(struct regs *r)
 {
   if (r->int_no < 32)
     {
-      puts(exception_messages[r->int_no]);
+      printf(exception_messages[r->int_no]);
       kerror(" Exception. System Halted!\n");
     }
 }

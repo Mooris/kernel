@@ -1,5 +1,7 @@
 #include <string.h>
 
+#include <kernel/isrs.h>
+
 struct idt_entry
 {
   unsigned short base_lo;
