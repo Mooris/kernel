@@ -1,17 +1,17 @@
 	.section .text
-	.global gdt_flush    # Allows the C code to link to this
-	.extern gp           # Says that _gp is in another file
+	.global gdt_flush
+	.extern gp
 
 gdt_flush:
 	lgdt gp(,1)
-	movw $0x10,%ax    # 0x10 is the offset in the GDT to our data segment
+	movw $0x10,%ax
 	movw %ax,%ds
 	movw %ax,%es
 	movw %ax,%fs
 	movw %ax,%gs
 	movw %ax,%ss
-	ljmp $0x08, $flush2   # 0x08 is the offset to our code segment: Far jump!
+	ljmp $0x08, $flush2
 
 flush2:
-	ret               # Returns back to the C code!
+	ret
 	
