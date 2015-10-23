@@ -12,4 +12,4 @@ menuentry "kernelito" {
 	multiboot /boot/kernelito.kernel
 }
 EOF
-grub-mkrescue -o kernelito.iso isodir
+grub2-mkrescue -o kernelito.iso isodir

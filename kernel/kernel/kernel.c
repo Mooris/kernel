@@ -21,7 +21,7 @@ void kerror(const char *estr) {
 
 void kernel_main(void)
 {
-  printf("Yolo");
+  printf("Yolo\n");
   int i = 4 / 0;
   printf("%d\n", i);
   printf("Yolo");
